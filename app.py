@@ -57,7 +57,7 @@ def github():
     repo_name = body['repository']
     # Add your own GitHub Token to run it local
     token = os.environ.get(
-        'GITHUB_TOKEN', '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')
+        'GITHUB_TOKEN', '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')
     GITHUB_URL = f"https://api.github.com/"
     headers = {
         "Authorization": f'token {token}'
@@ -191,6 +191,7 @@ def github():
 
     # Update your Google cloud deployed LSTM app URL (NOTE: DO NOT REMOVE "/")
     LSTM_API_URL = "https://lstm-forcast01-bb7jiburna-uc.a.run.app/" + "api/forecast"
+    #LSTM_API_URL = "http://localhost:8080/" + "api/forecast"
 
     '''
     Trigger the LSTM microservice to forecasted the created issues
