@@ -57,7 +57,7 @@ def github():
     repo_name = body['repository']
     # Add your own GitHub Token to run it local
     token = os.environ.get(
-        'GITHUB_TOKEN', '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')
+        'GITHUB_TOKEN', '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')
     GITHUB_URL = f"https://api.github.com/"
     headers = {
         "Authorization": f'token {token}'
@@ -130,6 +130,7 @@ def github():
         today = last_month
 
     df = pd.DataFrame(issues_reponse)
+    print("df size", df.size)
 
     # Daily Created Issues
     df_created_at = df.groupby(['created_at'], as_index=False).count()
