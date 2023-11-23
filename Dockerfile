@@ -1,4 +1,4 @@
-FROM python:3.8
+FROM python:3.9
 
 ENV PORT 5000
 ENV HOSTDIR 0.0.0.0
